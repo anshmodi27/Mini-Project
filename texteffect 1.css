@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: black;
+}
+h2{
+    position: relative;
+    margin: 0;
+    font-size: 64px;
+    font-weight: 900;
+    color: coral;
+    z-index: 1;
+    overflow: hidden;
+}
+h2::before{
+    content: '';
+    position: absolute;
+    left: 120%;
+    width: 120%;
+    height: 120%;
+    background: linear-gradient(90deg,transparent 0%, black 5%, black 100%);
+    animation: animate 5.5s linear forwards infinite;
+}
+@keyframes animate{
+    0%{
+        left: 110%;
+    }
+    100%{
+        left: -20%;
+    }
+}
+h2 span{
+    color: cornflowerblue;
+}
